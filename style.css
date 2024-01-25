@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+body {
+  background:'blue';
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  overflow: hidden;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#p1 {
+  width:100px;
+  height:100px;
+}
+
+.p1Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+/*   background: red; */
+}
+
+#p1Name {
+  font-size: 30px;
+}
+
+#p1Health {
+  font-size: 50px;
+}
+
+#p2{
+  width:100px;
+  height:100px;
+}
+
+
+.p2Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+/*   background: red; */
+}
+
+#p2Name {
+  font-size: 30px;
+}
+
+#p2Health {
+  font-size: 50px;
+}
+
+.playerControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ 
+}
+
+.AttackDiv{
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  height: 40px;
+  width: 100px;
+/*   background: blue; */
+}
+
+.HealDiv {
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  height: 40px;
+  width: 100px;
+/*   background: yellow; */
+}
+
+#attack {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  border:none;
+  background: #FFFF01;
+  outline: none;
+
+}
+
+#heal {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  border:none;
+  background: #7DFFFF;
+  outline: none;
+
+}
+
+#play {
+  height: 50px;
+  width: 120px;
+  border-radius: 20px;
+/*   border:none; */
+  background: #02cf02;
+  outline: none;
+  color: white;
+}
+
+#result {
+  font-size: 50px;
+  color : #0b940bb7;
+}
+
+#reset {
+  margin-top: 20px;
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+/*   border:none; */
+  background: #FF8800;
+  outline: none;
+  color: white;
+}
+
+.resultContainer {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height:150px;
+  width: 300px;
+}
+
+
+/* Your existing CSS styles */
+
+.rotate-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 1);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 50vh; /* Center the message vertically */
+}
+
+ @media only screen and (max-width: 767px) {
+   /* Show the rotate message only for screens smaller than 768px (typical mobile devices)  */
+  .rotate-message {
+    display: block;
+  }
+
+  /* Hide other content when the rotate message is displayed  */
+  /* .menu,
+  .resultContainer {
+    display: none;
+  } */
+ }  
+
+ /* Your existing styles */
+
+/* Add this media query to handle smaller screens */
+/* Your existing styles */
+
+/* Add this media query to handle smaller screens */
+@media only screen and (max-width: 767px) {
+  body {
+    overflow: auto; /* Allow scrolling on small screens */
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 80%; /* Adjust width as needed for smaller screens */
+    margin: auto; /* Center the menu */
+  }
+
+  .p1Info,
+  .p2Info {
+    width: 80%; /* Adjust width as needed for smaller screens */
+    margin-bottom: 20px; /* Add some space between player sections */
+  }
+
+  #p1Name,
+  #p2Name,
+  #p1Health,
+  #p2Health {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .playerControls {
+    flex-direction: row; /* Arrange controls in a row for better visibility */
+  }
+
+  .AttackDiv,
+  .HealDiv {
+    height: auto;
+    width: auto;
+  }
+
+  #attack,
+  #heal,
+  #play,
+  #reset {
+    width: 100%; /* Make buttons full width for better touch interaction */
+  }
+
+  #result {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    text-align: center; /* Center the result text */
+    margin-bottom: 10px; /* Add some bottom margin */
+  }
+
+  .resultContainer {
+    width: 80%; /* Adjust width as needed for smaller screens */
+  }
+
+  /* Additional styles to ensure the reset button is visible */
+  #reset {
+    margin-top: 10px; /* Add some top margin to the reset button */
+  }
+}
