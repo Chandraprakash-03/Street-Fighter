@@ -177,8 +177,8 @@ class Game {
 }
 
 // ** Create 2 players using the player class **
-let player1 = new Player('Batman',100,10)
-let player2 = new Player('Joker',100,10)
+let player1 = new Player('Player 1',100,10)
+let player2 = new Player('Player 2',100,10)
 
 
 // ** Save original Player Data into a variable in order to reset **
